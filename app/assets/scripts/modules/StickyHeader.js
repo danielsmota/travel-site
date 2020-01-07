@@ -45,7 +45,6 @@ class StickHeader {
         let matchingLink = el.getAttribute("data-matching-link")
         document.querySelectorAll(`.primary-nav a:not(${matchingLink})`).forEach(el => el.classList.remove("is-current-link"))
         document.querySelector(matchingLink).classList.add("is-current-link")
-        console.log(matchingLink)
       } else {
           if (window.scrollY < 500 && this.scrollDirection == 'up') {
             document.querySelector(`.primary-nav a:first-child`).classList.remove("is-current-link")
